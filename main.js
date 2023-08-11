@@ -10,11 +10,8 @@ let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
 
-
     let results = '';
     
-
-
     if( (playerSelection == 'rock' && computerSelection == 'scissors')  || 
         (playerSelection == 'paper' && computerSelection == 'rock') ||
         (playerSelection == 'scissors' && computerSelection == 'paper')){
@@ -39,27 +36,25 @@ function playRound(playerSelection, computerSelection) {
 
             if(computerScore == 5){
                 let winTxt = document.getElementById('winner');
-                winTxt.textContent = 'You Lost the game';
+                winTxt.textContent = 'You Lost. Venkat the great defeated you';
                 resetgame();
             }
-        }
+    }
 
     
       
         document.getElementById('result').textContent = results;
-        document.getElementById('playerScore').textContent = 'ur score: '+playerScore;
-        document.getElementById('compScore').textContent = 'comp score: ' +computerScore;
+        document.getElementById('playerScore').textContent = 'Your score: '+playerScore;
+        document.getElementById('compScore').textContent = 'Venkats score: ' +computerScore;
 
-
-    }
+}
+   
     function resetgame(){
         playerScore = 0;
         computerScore = 0;
     }
     
     
-
-
     const rockbtn = document.getElementById('rock');
     const paperbtn = document.getElementById('paper');
     const scissorsbtn = document.getElementById('scissors'); 
